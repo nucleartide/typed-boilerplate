@@ -4,8 +4,7 @@
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-redux": "^5.0.7",
-    "redux": "^3.7.2",
-    "redux-devtools-extension": "^2.13.2"
+    "redux": "^3.7.2"
   },
   "devDependencies": {
     "babel-plugin-react-require": "^3.0.0",
