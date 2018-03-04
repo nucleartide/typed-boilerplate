@@ -1,8 +1,6 @@
 [ignore]
 <PROJECT_ROOT>/node_modules/.*
 <PROJECT_ROOT>/dist/.*
-<PROJECT_ROOT>/src/old-stuff/.*
-<PROJECT_ROOT>/src/old-stuff-2/.*
 
 [include]
 

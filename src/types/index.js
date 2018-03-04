@@ -1,17 +1,6 @@
-import type {
-  Store as ReduxStore,
-  Dispatch as ReduxDispatch
-} from 'redux';
-import type {
-  // TodosState,
-  Todos,
-  TodosAction,
-} from './todo';
-import type {
-  // VisibilityFilterState,
-  VisibilityFilter,
-  VisibilityFilterAction,
-} from './visibility-filter';
+import type { Store as ReduxStore, Dispatch as ReduxDispatch } from 'redux';
+import type { Todos, TodosAction } from './todo';
+import type { VisibilityFilter, VisibilityFilterAction } from './visibility-filter';
 
 export type State = {|
   +todos: Todos,
@@ -23,8 +12,6 @@ export type Action =
   | VisibilityFilterAction
   ;
 
-export type Store =
-  ReduxStore<State, Action>
+export type Store = ReduxStore<State, Action>
 
-export type Dispatch =
-  ReduxDispatch<Action>;
+export type Dispatch = ReduxDispatch<Action>;
