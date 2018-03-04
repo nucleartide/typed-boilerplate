@@ -1,21 +1,21 @@
-import type { Todos as Model } from '../types/todos';
-import type { Identifier } from '../types/identifier';
+import type { Todos } from '../types/todo';
+import type { Id } from '../utils/uuid';
 import Todo from './Todo';
 
 type Props = {
-  todos: Model,
-  onTodoClick: (Identifier) => void,
+  todos: Todos,
+  onTodoClick: (id: Id) => void,
 };
 
 const TodoList = (p: Props) => (
-  <ul>
-  {p.todos.map(todo =>
-    <Todo
-      key={todo.id}
-      {...todo}
-      onClick={() => p.onTodoClick(todo.id)}
-    />
-  )}
+  <ul className="TodoList">
+    {p.todos.map(todo => (
+      <Todo
+        key={todo.id}
+        {...todo}
+        onClick={() => p.onTodoClick(todo.id)}
+      />
+    ))}
   </ul>
 );
 

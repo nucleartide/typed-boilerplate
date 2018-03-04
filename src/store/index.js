@@ -1,8 +1,10 @@
-import { combineReducers, createStore } from 'redux';
-import todos from './todos';
+import reduce from '../reducers';
+import { createStore } from 'redux';
+import type { Store } from '../types';
 
-const reduce = combineReducers({
-  todos,
-});
+const store: Store = createStore(
+  reduce,
+  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+);
 
-export default createStore(reduce);
+export default store;
