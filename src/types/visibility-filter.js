@@ -1,3 +1,4 @@
+import type { ReduxInit } from './redux-init';
 
 /**
  * Domain models.
@@ -20,5 +21,6 @@ export type SetFilter = {
 };
 
 export type VisibilityFilterAction =
+  | ReduxInit
   | SetFilter
   ;

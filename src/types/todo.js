@@ -1,4 +1,5 @@
 import type { Id } from '../utils/uuid';
+import type { ReduxInit } from './redux-init';
 
 /**
  * Domain models.
@@ -32,6 +33,7 @@ export type ToggleTodo = {|
 |};
 
 export type TodosAction =
+  | ReduxInit
   | AddTodo
   | ToggleTodo
   ;
