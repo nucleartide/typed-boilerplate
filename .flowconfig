@@ -1,0 +1,15 @@
+[ignore]
+<PROJECT_ROOT>/node_modules/.*
+<PROJECT_ROOT>/dist/.*
+<PROJECT_ROOT>/src/old-stuff/.*
+
+[include]
+
+[libs]
+
+[lints]
+
+[options]
+all=true
+
+[strict]
