@@ -1,17 +1,23 @@
-import type { VisibilityFilter, VisibilityFilterAction } from '../types/visibility-filter';
-
-export const getInitialState = () => 'show all';
+import type {
+  VisibilityFilter as Filter,
+  VisibilityFilterAction as Action,
+} from '../types/visibility-filter';
 
 const reduce = (
-  state: VisibilityFilter = getInitialState(),
-  action: VisibilityFilterAction
-): VisibilityFilter => {
+  state: Filter = 'show all',
+  action: Action
+): Filter => {
   switch (action.type) {
-    case 'set value':
-      return action.filter;
-    default:
-      (action: empty);
-      return state;
+
+  case '@@INIT':
+    return state;
+
+  case 'set filter':
+    return action.filter;
+
+  default:
+    (action: empty);
+    return state;
   }
 }
 

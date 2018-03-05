@@ -4,7 +4,6 @@ import type {
 } from '../types/visibility-filter';
 
 export const setVisibilityFilter = (f: Filter): Action => ({
-  category: 'visibility filter',
-  type: 'set value',
+  type: 'set filter',
   filter: f,
 });

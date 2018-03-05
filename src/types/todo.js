@@ -20,15 +20,13 @@ export type Todos = Array<Todo>;
  */
 
 export type AddTodo = {|
-  category: 'todo',
-  type: 'add',
+  type: 'add todo',
   +id: Id,
   +text: Text,
 |};
 
 export type ToggleTodo = {|
-  category: 'todo',
-  type: 'toggle',
+  type: 'toggle todo',
   +id: Id,
 |};
 

@@ -1,30 +1,31 @@
 import type { Todos, TodosAction } from '../types/todo';
 
-export const getInitialState = () => [];
-
 const todos = (
-  state: Todos = getInitialState(),
+  state: Todos = [],
   action: TodosAction
 ): Todos => {
   switch (action.type) {
 
-    case 'add':
-      const newTodo = {
-        id: action.id,
-        text: action.text,
-        completed: false
-      };
-      return [...state, newTodo];
+  case '@@INIT':
+    return state;
 
-    case 'toggle':
-      return state.map(todo => todo.id === action.id
-        ? { ...todo, completed: !todo.completed }
-        : todo
-      );
+  case 'add todo':
+    return [...state, {
+      id: action.id,
+      text: action.text,
+      completed: false
+    }];
 
-    default:
-      (action: empty);
-      return state;
+  case 'toggle todo':
+    const { id } = action;
+    return state.map(todo => todo.id === id
+      ? { ...todo, completed: !todo.completed }
+      : todo
+    );
+
+  default:
+    (action: empty);
+    return state;
   }
 };
 

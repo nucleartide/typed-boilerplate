@@ -15,8 +15,7 @@ export type VisibilityFilter =
  */
 
 export type SetFilter = {
-  category: 'visibility filter',
-  type: 'set value',
+  type: 'set filter',
   +filter: VisibilityFilter,
 };
 
