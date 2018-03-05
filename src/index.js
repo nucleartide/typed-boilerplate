@@ -16,10 +16,12 @@ render(
   <Provider store={store}>
     <div className="App">
       <h2 className="Title">My Awesome Todo App</h2>
-      {'Show: '}
-      <FilterLink filter={'show all'}>All</FilterLink>{' '}
-      <FilterLink filter={'show active'}>Active</FilterLink>{' '}
-      <FilterLink filter={'show completed'}>Completed</FilterLink>
+      <div className="FilterBar">
+        {'Show: '}
+        <FilterLink filter={'show all'}>All</FilterLink>{' '}
+        <FilterLink filter={'show active'}>Active</FilterLink>{' '}
+        <FilterLink filter={'show completed'}>Completed</FilterLink>
+      </div>
       <VisibleTodoList />
       <AddTodo />
     </div>

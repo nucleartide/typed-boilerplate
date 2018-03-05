@@ -11,6 +11,16 @@ body {
   font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
 }
 
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
 /**
  * App.
  */
@@ -112,4 +122,12 @@ body {
   background-color: #ccc;
   color: white;
   text-decoration: none;
+}
+
+/**
+ * FilterBar.
+ */
+
+.FilterBar {
+  padding-bottom: 1rem;
 }
