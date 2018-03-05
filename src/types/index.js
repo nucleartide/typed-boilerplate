@@ -1,23 +1,14 @@
 import type { ReduxInit } from './redux-init';
 import type { Store as ReduxStore, Dispatch as ReduxDispatch } from 'redux';
-/*
-import type { Todos, TodosAction } from './todo';
-import type { VisibilityFilter, VisibilityFilterAction } from './visibility-filter';
-*/
+import type { Channels, ChannelAction } from './channel';
 
 export type State = {
-  /*
-  +todos: Todos,
-  +visibilityFilter: VisibilityFilter,
-  */
+  +channels: Channels,
 };
 
 export type Action =
   | ReduxInit
-  /*
-  | TodosAction
-  | VisibilityFilterAction
-  */
+  | ChannelAction
   ;
 
 export type Store = ReduxStore<State, Action>

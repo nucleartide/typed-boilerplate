@@ -1,15 +1,9 @@
-/*
-import todos from './todos';
-import visibilityFilter from './visibility-filter';
-*/
+import channels from './channel';
 import { reduxInit } from '../actions/redux-init';
 import type { State, Action } from '../types';
 
 const initialState = () => ({
-  /*
-  todos: todos(undefined, reduxInit()),
-  visibilityFilter: visibilityFilter(undefined, reduxInit()),
-  */
+  channels: channels(undefined, reduxInit()),
 });
 
 const reduce = (
@@ -21,20 +15,12 @@ const reduce = (
   case '@@INIT':
     return state;
 
-  /*
-  case 'add todo':
-  case 'toggle todo':
+  case 'select channel':
+  case 'add channel':
+  case 'update channel':
     return {
-      todos: todos(state.todos, action),
-      visibilityFilter: state.visibilityFilter,
-    }
-
-  case 'set filter':
-    return {
-      todos: state.todos,
-      visibilityFilter: visibilityFilter(state.visibilityFilter, action),
-    }
-  */
+      channels: channels(state.channels, action),
+    };
 
   default:
     (action: empty);
