@@ -15,11 +15,11 @@ if (el === null) {
 render(
   <Provider store={store}>
     <div className="App">
-      <VisibleTodoList />
-      Show:{' '}
+      {'Show: '}
       <FilterLink filter={'show all'}>All</FilterLink>{' '}
       <FilterLink filter={'show active'}>Active</FilterLink>{' '}
       <FilterLink filter={'show completed'}>Completed</FilterLink>
+      <VisibleTodoList />
       <AddTodo />
     </div>
   </Provider>,
