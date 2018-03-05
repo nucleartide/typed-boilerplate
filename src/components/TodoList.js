@@ -7,6 +7,7 @@ type Props = {
   onTodoClick: (id: Id) => void,
 };
 
+// <TodoList> displays a list of todos.
 const TodoList = (p: Props) => (
   <ul className="TodoList">
     {p.todos.map(todo => (

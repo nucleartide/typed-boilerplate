@@ -7,20 +7,19 @@ type Props = {
   filter: VisibilityFilter,
 };
 
-const mapStateToProps = (state, ownProps: Props) => {
-  return {
-    active: state.visibilityFilter === ownProps.filter,
-  };
-};
+const mapStateToProps = (state, ownProps: Props) => ({
+  active: state.visibilityFilter === ownProps.filter,
+});
 
-const mapDispatchToProps = (dispatch, ownProps: Props) => {
-  return {
-    onClick: () =>
-      dispatch(setVisibilityFilter(ownProps.filter)),
-  };
-};
+const mapDispatchToProps = (dispatch, ownProps: Props) => ({
+  onClick: () => dispatch(setVisibilityFilter(ownProps.filter)),
+});
 
-export default connect(
+// <FilterLink> displays a <Link> tied to the state of the
+// current visibility filter.
+const FilterLink = connect(
   mapStateToProps,
   mapDispatchToProps
 )(Link);
+
+export default FilterLink;

@@ -13,19 +13,19 @@ type State = {
 
 class AddTodo extends Component<Props, State> {
   state = {
-    value: ''
+    value: '',
   }
 
-  handleChange = (e) => {
+  handleChange = e => {
     const value = e.currentTarget.value;
     this.setState({ value });
   }
 
-  handleSubmit = (e) => {
+  handleSubmit = e => {
     e.preventDefault();
     if (!this.state.value.trim()) return;
     this.props.dispatch(addTodo(this.state.value));
-    this.setState({ value: '' })
+    this.setState({ value: '' });
   }
 
   render() {
