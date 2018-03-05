@@ -29,9 +29,12 @@ class AddTodo extends Component<Props, State> {
   }
 
   render() {
-    return <form onSubmit={this.handleSubmit}>
+    return <form
+      className="AddTodo"
+      onSubmit={this.handleSubmit}
+    >
       <input value={this.state.value} onChange={this.handleChange} />
-      <button type="submit">Add Todo</button>
+      <button type="submit">New Todo</button>
     </form>
   }
 }

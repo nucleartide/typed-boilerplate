@@ -5,11 +5,11 @@ type Props = {
 };
 
 const Active = (p: Props) => (
-  <span>{p.children}</span>
+  <span className="ActiveLink">{p.children}</span>
 );
 
 const Inactive = (p: Props) => (
-  <a href="#" onClick={e => {
+  <a className="InactiveLink" href="#" onClick={e => {
     e.preventDefault();
     p.onClick();
   }}>
