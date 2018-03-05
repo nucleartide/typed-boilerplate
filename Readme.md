@@ -12,3 +12,7 @@ This is a simple React / Redux boilerplate that emphasizes static type checking 
 Clone the repo, `npm install`, and hack away!
 
 You might also want to ensure that your editor has properly configured Flow integration.
+
+## Example
+
+See the example todo app at the [`todo`](https://github.com/nucleartide/typed-boilerplate/releases/tag/todo) tag.
