@@ -3,9 +3,11 @@ import { Provider } from 'react-redux';
 import { createStore } from 'redux'
 import store from './store';
 
+/*
 import VisibleTodoList from './containers/VisibleTodoList';
 import FilterLink from './containers/FilterLink';
 import AddTodo from './containers/AddTodo';
+*/
 
 const el = document.getElementById('app');
 if (el === null) {
@@ -15,15 +17,8 @@ if (el === null) {
 render(
   <Provider store={store}>
     <div className="App">
-      <h2 className="Title">My Awesome Todo App</h2>
-      <div className="FilterBar">
-        {'Show: '}
-        <FilterLink filter={'show all'}>All</FilterLink>{' '}
-        <FilterLink filter={'show active'}>Active</FilterLink>{' '}
-        <FilterLink filter={'show completed'}>Completed</FilterLink>
-      </div>
-      <VisibleTodoList />
-      <AddTodo />
+      <h2 className="Title">My Awesome App</h2>
+      <p>App goes here...</p>
     </div>
   </Provider>,
   el

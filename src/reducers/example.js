@@ -1,3 +1,4 @@
+/*
 import type { Todos, TodosAction } from '../types/todo';
 
 const todos = (
@@ -30,3 +31,4 @@ const todos = (
 };
 
 export default todos;
+*/

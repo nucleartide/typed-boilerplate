@@ -1,11 +1,15 @@
+/*
 import todos from './todos';
 import visibilityFilter from './visibility-filter';
+*/
 import { reduxInit } from '../actions/redux-init';
 import type { State, Action } from '../types';
 
 const initialState = () => ({
+  /*
   todos: todos(undefined, reduxInit()),
   visibilityFilter: visibilityFilter(undefined, reduxInit()),
+  */
 });
 
 const reduce = (
@@ -17,6 +21,7 @@ const reduce = (
   case '@@INIT':
     return state;
 
+  /*
   case 'add todo':
   case 'toggle todo':
     return {
@@ -29,6 +34,7 @@ const reduce = (
       todos: state.todos,
       visibilityFilter: visibilityFilter(state.visibilityFilter, action),
     }
+  */
 
   default:
     (action: empty);
