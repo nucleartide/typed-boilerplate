@@ -22,8 +22,81 @@ html {
 }
 
 /**
- * SomeComponent.
+ * Container.
  */
 
-.SomeComponent {
+.Container {
+  display: flex;
+  border-radius: 5px;
+  padding: 1rem;
+}
+
+/**
+ * List.
+ */
+
+.List {
+  margin-right: 1rem;
+}
+
+/**
+ * Detail.
+ */
+
+.Detail {
+  flex-grow: 1;
+}
+
+/**
+ * Modal.
+ */
+
+.Modal.Overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(222, 222, 222, 0.5);
+}
+
+/**
+ * Container.
+ */
+
+.Container {
+  width: 700px;
+  margin: 3rem auto;
+  background-color: white;
+}
+
+/**
+ * ButtonContainer.
+ */
+
+.ButtonContainer {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+/**
+ * CloseButton.
+ */
+
+.CloseButton {
+  border-radius: 50%;
+  width: 2rem;
+  height: 2rem;
+  text-align: center;
+  line-height: 2rem;
+  border: solid 1px #ccc;
+  color: #ccc;
+  transition: 0.1s color, 0.1s background-color, 0.1s border-color;
+}
+
+.CloseButton:hover {
+  color: white;
+  cursor: pointer;
+  background-color: #7289da;
+  border-color: #7289da;
 }

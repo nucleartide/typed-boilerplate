@@ -6,6 +6,11 @@ import store from './store';
 import ChannelItem from './components/channel-item';
 import ChannelList from './components/channel-list';
 import ConnectedChannelList from './containers/connected-channel-list';
+import AddChannel from './components/add-channel';
+import ConnectedAddChannel from './containers/connected-add-channel';
+import ChannelDetail from './components/channel-detail';
+import ConnectedChannelDetail from './containers/connected-channel-detail';
+import App from './components/app';
 
 const el = document.getElementById('app');
 if (el === null) {
@@ -37,15 +42,37 @@ const channels = [
   },
 ]
 
+// TODO: modal component
+
+/*
+<ChannelList channels={channels} onChannelClick={id => console.log('whoop:', id)} />
+<AddChannel onSubmit={input => console.log('submitted form:', input)} />
+<ChannelDetail channel={channel} onSubmit={name => console.log('update to:', name)} />
+*/
+
 render(
   <Provider store={store}>
     <div className="App">
       <h2 className="Title">My Awesome App</h2>
-      <p>App goes here...</p>
-      <ChannelItem {...channel} onClick={() => console.log('clicked channel 1')} />
-      <ChannelItem {...channel2} onClick={() => console.log('clicked channel 2')} />
-      <ChannelList channels={channels} onChannelClick={id => console.log('whoop:', id)} />
-      <ConnectedChannelList />
+      <App render={(closeModal) => (
+        <div className="Container">
+          <div className="List">
+            <ConnectedChannelList />
+            <ConnectedAddChannel />
+          </div>
+          <div className="Detail">
+            <div className="ButtonContainer">
+              <button
+                className="CloseButton"
+                type="button"
+                onClick={closeModal}
+              >✖</button>
+            </div>
+            <ConnectedChannelDetail />
+          </div>
+        </div>
+      )}>
+      </App>
     </div>
   </Provider>,
   el

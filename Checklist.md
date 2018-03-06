@@ -15,9 +15,10 @@
 
 5. component tree
 
-- modal
+x modal
   x redux
     x channellist
       x channelitem
-  - addchannel (redux)
-  - channeldetail (redux)
+  x addchannel (redux)
+  x channeldetail (redux)
+  x close modal

@@ -7,7 +7,7 @@ type Props = {
 };
 
 const ChannelList = (p: Props) => (
-  <ul>
+  <ul className="ChannelList">
     {p.channels.map(channel => (
       <ChannelItem
         key={channel.id}
