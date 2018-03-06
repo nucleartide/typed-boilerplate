@@ -1,0 +1,16 @@
+1. Model your data.
+  - Example: list of todos.
+  - Then define actions.
+  - Example: add todo, remove todo.
+
+2. Make types.
+  - Don't forget to update types in types/index.js
+
+3. Make action creators.
+
+4. Make reducers.
+  - Don't forget root reducer.
+
+5. Sketch out component tree. Consider which components are connected to Redux.
+
+6. Add styling.
